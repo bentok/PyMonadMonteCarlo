@@ -31,11 +31,10 @@ def point_roll(dice, status):
         )
 
 def craps():
-    outcome = (
+    return (
         Just(('', 0, [])) >> come_out_roll(dice)
                           >> point_roll(dice)
     )
-    print(outcome)
 
 def main():
     print(craps())
